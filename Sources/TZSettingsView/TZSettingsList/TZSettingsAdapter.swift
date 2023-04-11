@@ -18,6 +18,6 @@ import Foundation
              }
          }
  */
-protocol TZSettingsAdapter {
+public protocol TZSettingsAdapter {
     func getSettingsSections() -> [TZSettingsView.Secton]
 }

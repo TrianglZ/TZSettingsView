@@ -8,11 +8,11 @@
 import SwiftUI
 
 extension TZSettingsView {
-    struct Secton: Identifiable {
+    public struct Secton: Identifiable {
         /**
          The identifier for the section.
          */
-        let id: String = UUID().uuidString
+        public let id: String = UUID().uuidString
 
         /**
          The title of the section.

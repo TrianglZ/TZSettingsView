@@ -22,12 +22,12 @@ import SwiftUI
          }
      }
  */
-struct TZSettingsView: View {
+public struct TZSettingsView: View {
     /// The adapter property is an instance of TZSettingsAdapter
     /// that provides the app settings sections to be displayed in the view.
     let adapter: TZSettingsAdapter
 
-    var body: some View {
+    public var body: some View {
         VStack(spacing: 25) {
             ForEach(adapter.getSettingsSections()) { section in
                 TZSettingsSectionView(section: section)
