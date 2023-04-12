@@ -54,7 +54,7 @@ struct TZSettingsActionCellView: View {
                  An indicator arrow that is displayed in the action cell, if applicable.
                  */
                 if configuration.theme?.hasIndicatorView ?? false {
-                    Image(systemName: "chevron.down")
+                    Image.arrowForward
                         .renderingMode(.template)
                         .foregroundColor(configuration.theme?.tint)
                 }

@@ -54,7 +54,7 @@ struct TZSettingsNavigationCellView<Destination>: View where Destination: View {
                  An indicator arrow that is displayed in the navigation cell, if applicable.
                  */
                 if configuration.theme?.hasIndicatorView ?? true {
-                    Image(systemName: "chevron.down")
+                    Image.arrowForward
                         .renderingMode(.template)
                         .foregroundColor(configuration.theme?.tint)
                 }

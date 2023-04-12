@@ -55,7 +55,7 @@ struct TZSettingsLinkCellView: View {
                      An indicator arrow that is displayed in the link cell, if applicable.
                      */
                     if configuration.theme?.hasIndicatorView ?? true {
-                        Image(systemName: "chevron.down")
+                        Image.arrowForward
                             .renderingMode(.template)
                             .foregroundColor(configuration.theme?.tint)
                     }
