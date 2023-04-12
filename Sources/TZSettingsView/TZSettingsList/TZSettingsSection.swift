@@ -28,6 +28,12 @@ extension TZSettingsView {
          The settings to be displayed in the section.
          */
         var cells: [TZSettingConfiguration]
+
+        public init(title: String? = nil, theme: Theme? = nil, cells: [TZSettingConfiguration]) {
+            self.title = title
+            self.theme = theme
+            self.cells = cells
+        }
     }
 }
 
@@ -38,6 +44,11 @@ extension TZSettingsView.Secton {
         var color: Color
         /// The font to be used in the themed view or section.
         var font: Font
+
+        public init(color: Color, font: Font) {
+            self.color = color
+            self.font = font
+        }
     }
 
 }
@@ -57,6 +68,11 @@ extension TZSettingsView {
         /**
          The cell configuration for the setting.
          */
-        public let cellConfiguration: TZSettingCellConfiguration
+        let cellConfiguration: TZSettingCellConfiguration
+
+        public init(type: CellType, cellConfiguration: TZSettingCellConfiguration) {
+            self.type = type
+            self.cellConfiguration = cellConfiguration
+        }
     }
 }
