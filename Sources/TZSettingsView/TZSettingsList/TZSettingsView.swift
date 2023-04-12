@@ -25,7 +25,7 @@ import SwiftUI
 public struct TZSettingsView: View {
     /// The adapter property is an instance of TZSettingsAdapter
     /// that provides the app settings sections to be displayed in the view.
-    let adapter: TZSettingsAdapter
+    public let adapter: TZSettingsAdapter
 
     public var body: some View {
         VStack(spacing: 25) {

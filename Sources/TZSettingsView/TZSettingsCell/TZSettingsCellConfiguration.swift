@@ -12,7 +12,7 @@ extension TZSettingsView {
     /**
      An enumeration of the types of cells that can be used to configure settings.
      */
-    enum CellType {
+    public enum CellType {
 
         /**
          A cell type that displays a navigation view.
@@ -49,7 +49,7 @@ extension TZSettingsView {
     /**
      A struct that defines the configuration for a setting cell.
      */
-    struct TZSettingCellConfiguration {
+    public struct TZSettingCellConfiguration {
 
         /**
          The image to be displayed in the cell.
@@ -73,7 +73,7 @@ extension TZSettingsView.TZSettingCellConfiguration {
     /**
      A struct that defines the theme to be applied to a cell configuration.
      */
-    struct Theme {
+    public struct Theme {
 
         /**
          The background color of the cell.

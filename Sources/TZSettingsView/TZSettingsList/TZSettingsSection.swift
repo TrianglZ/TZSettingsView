@@ -33,7 +33,7 @@ extension TZSettingsView {
 
 extension TZSettingsView.Secton {
     /// A struct representing a theme that can be applied to a view or a section in the `AppSettingsView.` SwiftUI view.
-    struct Theme {
+    public struct Theme {
         /// The main color of the theme.
         var color: Color
         /// The font to be used in the themed view or section.
@@ -43,11 +43,11 @@ extension TZSettingsView.Secton {
 }
 
 extension TZSettingsView {
-    struct TZSettingConfiguration: Identifiable {
+    public struct TZSettingConfiguration: Identifiable {
         /**
          The identifier for the setting configuration.
          */
-        let id: String = UUID().uuidString
+        public let id: String = UUID().uuidString
 
         /**
          The type of setting to be displayed.
@@ -57,6 +57,6 @@ extension TZSettingsView {
         /**
          The cell configuration for the setting.
          */
-        let cellConfiguration: TZSettingCellConfiguration
+        public let cellConfiguration: TZSettingCellConfiguration
     }
 }
