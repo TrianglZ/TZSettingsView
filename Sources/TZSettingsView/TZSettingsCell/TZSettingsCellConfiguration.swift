@@ -99,9 +99,9 @@ extension TZSettingsView.TZSettingCellConfiguration {
         /**
          A boolean value indicating whether or not the cell should display an indicator view.
          */
-        var hasIndicatorView: Bool = true
+        var hasIndicatorView: Bool
 
-        public init(color: Color, tint: Color, font: Font, hasIndicatorView: Bool) {
+        public init(color: Color, tint: Color, font: Font, hasIndicatorView: Bool = true) {
             self.color = color
             self.tint = tint
             self.font = font
