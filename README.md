@@ -1,3 +1,4 @@
+
 # TZSettingsView
 
 A SwiftUI view that displays app settings sections provided by a `TZSettingsAdapter`.
@@ -17,27 +18,39 @@ A SwiftUI view that displays app settings sections provided by a `TZSettingsAdap
 ```swift
 class MySettingsAdapter: TZSettingsAdapter {
 
-let theme: TZSettingsView.Secton.Theme = .init(color: .black, font: .system(size: 15, weight: .semibold))
+let theme: TZSettingsView.Secton.Theme = .init(color: .black,
+        font: .system(size: 15, weight: .semibold))
 
     func getSettingsSections() -> [TZSettingsView.Section] {
-        let section1 = TZSettingsView.Section(title: "Title", theme: theme, cells: [Cell.myVehicle, Cell.pointsHistory])
+        let section1 = TZSettingsView.Section(title: "Title",
+         theme: theme, 
+         cells: [Cell.myVehicle, Cell.pointsHistory])
+         
         return [section1]
     }
 }
 
-exention MySettingsAdapter { 
+extension MySettingsAdapter { 
 enum Cell {
     case myVehicle
     case pointsHistory
 
     var toSettinsCell: TZSettingsView.TZSettingConfiguration {
-    let theme: TZSettingsView.TZSettingCellConfiguration.Theme = .init(color: .black, tint: .gray, font: .system(size: 15), hasIndicatorView: true)
+    let theme: TZSettingsView.TZSettingCellConfiguration.Theme = .init(color: .black,
+     tint: .gray,
+     font: .system(size: 15), hasIndicatorView: true)
     
     switch self {
     case .myVehicle:
-        return .init(type: .navigation(view: Text("myVehicle")), cellConfiguration: .init(image: Image("myVehicles"), title: "myVehicles", theme: theme))
+        return .init(type: .navigation(view: Text("myVehicle")),
+         cellConfiguration: .init(image: Image("myVehicles"), 
+         title: "myVehicles",
+         theme: theme))
     case .pointsHistory:
-        return .init(type: .navigation(view: Text("pointsHistory")), cellConfiguration: .init(image: Image("pointsHistory"), title: "pointsHistory", theme: theme))
+        return .init(type: .navigation(view: Text("pointsHistory")),
+         cellConfiguration: .init(image: Image("pointsHistory"), 
+         title: "pointsHistory",
+         theme: theme))
     }
 }
 ```
