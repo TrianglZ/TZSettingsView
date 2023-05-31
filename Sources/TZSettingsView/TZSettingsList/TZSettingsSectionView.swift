@@ -29,23 +29,29 @@ struct TZSettingsSectionView: View {
             // MARK: - Cells for each Section
             VStack(spacing: 0) {
                 ForEach(section.cells) { cell in
-                    Group {
-                        switch cell.type {
-                        case .navigation(let view):
-                            TZSettingsNavigationCellView(configuration: cell.cellConfiguration) {
-                                AnyView(view)
+                    VStack(spacing: 0) {
+                        Group {
+                            switch cell.type {
+                            case .navigation(let view):
+                                TZSettingsNavigationCellView(configuration: cell.cellConfiguration) {
+                                    AnyView(view)
+                                }
+                            case .link(let url):
+                                TZSettingsLinkCellView(configuration: cell.cellConfiguration, link: url)
+                            case .toggle(let isOn):
+                                TZSettingsToggleCellView(isOn: isOn,
+                                                          configuration: cell.cellConfiguration)
+                            case .action(let action):
+                                TZSettingsActionCellView(configuration: cell.cellConfiguration,
+                                                          action: action)
                             }
-                        case .link(let url):
-                            TZSettingsLinkCellView(configuration: cell.cellConfiguration, link: url)
-                        case .toggle(let isOn):
-                            TZSettingsToggleCellView(isOn: isOn,
-                                                      configuration: cell.cellConfiguration)
-                        case .action(let action):
-                            TZSettingsActionCellView(configuration: cell.cellConfiguration,
-                                                      action: action)
+                        }
+                        .frame(height: section.cellHeight ?? 60)
+
+                        if section.shouldShowCellsDivider && section.cells.last != cell {
+                            Divider()
                         }
                     }
-                    .frame(height: section.cellHeight ?? 60)
                 }
             }
             .padding(.horizontal, 20)

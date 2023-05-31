@@ -34,11 +34,21 @@ extension TZSettingsView {
          */
         var cellHeight: CGFloat?
 
-        public init(title: String? = nil, theme: Theme? = nil, cells: [TZSettingConfiguration], cellHeight: CGFloat?) {
+        /**
+         Showing a native divider view after each cell except last cell
+         */
+        var shouldShowCellsDivider: Bool
+
+        public init(title: String? = nil,
+                    theme: Theme? = nil,
+                    cells: [TZSettingConfiguration],
+                    cellHeight: CGFloat?,
+                    shouldShowCellsDivider: Bool = false) {
             self.title = title
             self.theme = theme
             self.cells = cells
             self.cellHeight = cellHeight
+            self.shouldShowCellsDivider = shouldShowCellsDivider
         }
     }
 }
@@ -80,5 +90,12 @@ extension TZSettingsView {
             self.type = type
             self.cellConfiguration = cellConfiguration
         }
+    }
+}
+
+// MARK: - Conform to Equatable
+extension TZSettingsView.TZSettingConfiguration: Equatable {
+    public static func == (lhs: TZSettingsView.TZSettingConfiguration, rhs: TZSettingsView.TZSettingConfiguration) -> Bool {
+        lhs.id == rhs.id
     }
 }
