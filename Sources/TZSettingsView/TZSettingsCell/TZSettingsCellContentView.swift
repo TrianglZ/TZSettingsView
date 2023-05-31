@@ -45,7 +45,7 @@ struct TZSettingsCellContentView: View {
              The hint of the setting cell if exists.
              */
             if let hint = configuration.hint {
-                Text(configuration.title)
+                Text(hint)
                     .foregroundColor(configuration.theme?.hintColor ?? .gray)
                     .font(configuration.theme?.font ?? .system(size: 15))
                     .padding(.trailing, 20)
