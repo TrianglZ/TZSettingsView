@@ -42,7 +42,7 @@ extension TZSettingsView {
         public init(title: String? = nil,
                     theme: Theme? = nil,
                     cells: [TZSettingConfiguration],
-                    cellHeight: CGFloat?,
+                    cellHeight: CGFloat? = nil,
                     shouldShowCellsDivider: Bool = false) {
             self.title = title
             self.theme = theme
