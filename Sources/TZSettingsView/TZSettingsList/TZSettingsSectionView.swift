@@ -19,7 +19,7 @@ struct TZSettingsSectionView: View {
     let section: TZSettingsView.Section
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 12) {
             // MARK: - title for each Section
             if let title = section.title {
                 Text(title)
@@ -45,7 +45,7 @@ struct TZSettingsSectionView: View {
                                                       action: action)
                         }
                     }
-                    .frame(height: 60)
+                    .frame(height: section.cellHeight ?? 60)
                 }
             }
             .padding(.horizontal, 20)

@@ -29,10 +29,16 @@ extension TZSettingsView {
          */
         var cells: [TZSettingConfiguration]
 
-        public init(title: String? = nil, theme: Theme? = nil, cells: [TZSettingConfiguration]) {
+        /**
+         The height for each cell in a section
+         */
+        var cellHeight: CGFloat?
+
+        public init(title: String? = nil, theme: Theme? = nil, cells: [TZSettingConfiguration], cellHeight: CGFloat?) {
             self.title = title
             self.theme = theme
             self.cells = cells
+            self.cellHeight = cellHeight
         }
     }
 }

@@ -22,10 +22,10 @@ let theme: TZSettingsView.Section.Theme = .init(color: .black,
         font: .system(size: 15, weight: .semibold))
 
     func getSettingsSections() -> [TZSettingsView.Section] {
-        let section1 = TZSettingsView.Section(title: "Title",
-         theme: theme, 
-         cells: [Cell.myVehicle, Cell.pointsHistory])
-         
+            let section1 = TZSettingsView.Section(title: "Title",
+            theme: theme, 
+            cells: [Cell.myVehicle, Cell.pointsHistory],
+            cellHeight: 60)
         return [section1]
     }
 }
