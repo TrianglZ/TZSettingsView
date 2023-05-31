@@ -48,7 +48,7 @@ struct TZSettingsCellContentView: View {
                 Text(hint)
                     .foregroundColor(configuration.theme?.hintColor ?? .gray)
                     .font(configuration.theme?.font ?? .system(size: 15))
-                    .padding(.trailing, 20)
+                    .padding(.trailing, 16)
             }
         }
     }
