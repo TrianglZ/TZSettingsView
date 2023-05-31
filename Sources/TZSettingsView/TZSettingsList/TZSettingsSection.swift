@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension TZSettingsView {
-    public struct Secton: Identifiable {
+    public struct Section: Identifiable {
         /**
          The identifier for the section.
          */
@@ -37,7 +37,7 @@ extension TZSettingsView {
     }
 }
 
-extension TZSettingsView.Secton {
+extension TZSettingsView.Section {
     /// A struct representing a theme that can be applied to a view or a section in the `AppSettingsView.` SwiftUI view.
     public struct Theme {
         /// The main color of the theme.

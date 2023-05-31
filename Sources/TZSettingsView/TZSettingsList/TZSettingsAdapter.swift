@@ -25,5 +25,5 @@ import Foundation
  */
 public protocol TZSettingsAdapter {
     var sectionsSpacing: CGFloat { get }
-    func getSettingsSections() -> [TZSettingsView.Secton]
+    func getSettingsSections() -> [TZSettingsView.Section]
 }

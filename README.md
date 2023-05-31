@@ -18,7 +18,7 @@ A SwiftUI view that displays app settings sections provided by a `TZSettingsAdap
 ```swift
 class MySettingsAdapter: TZSettingsAdapter {
 
-let theme: TZSettingsView.Secton.Theme = .init(color: .black,
+let theme: TZSettingsView.Section.Theme = .init(color: .black,
         font: .system(size: 15, weight: .semibold))
 
     func getSettingsSections() -> [TZSettingsView.Section] {

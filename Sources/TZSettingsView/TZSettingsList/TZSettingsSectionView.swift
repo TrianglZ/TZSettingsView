@@ -10,13 +10,13 @@ import SwiftUI
 /**
  A view that displays a section of settings in an app settings view.
 
- Use `TZSettingsView.Secton` to define the settings  section, and `AppSettingsView.TZSettingConfiguration`
+ Use `TZSettingsView.Section` to define the settings  section, and `AppSettingsView.TZSettingConfiguration`
  to define each setting cell within the section.
 
  */
 struct TZSettingsSectionView: View {
     /// The section of settings to display in this view.
-    let section: TZSettingsView.Secton
+    let section: TZSettingsView.Section
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
