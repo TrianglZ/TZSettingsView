@@ -12,12 +12,18 @@ import Foundation
     Usage Example:
  
          class MySettingsAdapter: TZSettingsAdapter {
-             func getSettingsSections() -> [TZSettingsView.Section] {
+
+            sectionsSpacing: CGFloat {
+                return 25
+            }
+
+            func getSettingsSections() -> [TZSettingsView.Section] {
                  // Return an array of app settings sections.
                  return []
-             }
+            }
          }
  */
 public protocol TZSettingsAdapter {
+    var sectionsSpacing: CGFloat { get }
     func getSettingsSections() -> [TZSettingsView.Secton]
 }

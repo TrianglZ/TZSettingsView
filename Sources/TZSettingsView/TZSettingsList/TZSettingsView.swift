@@ -32,7 +32,7 @@ public struct TZSettingsView: View {
     }
     
     public var body: some View {
-        VStack(spacing: 25) {
+        VStack(spacing: adapter.sectionsSpacing) {
             ForEach(adapter.getSettingsSections()) { section in
                 TZSettingsSectionView(section: section)
             }
