@@ -41,11 +41,6 @@ struct TZSettingsToggleCellView: View {
             TZSettingsCellContentView(configuration: configuration)
 
             /**
-             A spacer that fills the remaining space in the horizontal stack.
-             */
-            Spacer()
-
-            /**
              The toggle switch that is displayed in the toggle cell.
              */
             Toggle(isOn: $isOn) {

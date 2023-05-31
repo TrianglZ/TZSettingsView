@@ -47,11 +47,6 @@ struct TZSettingsLinkCellView: View {
                     TZSettingsCellContentView(configuration: configuration)
 
                     /**
-                     A spacer that fills the remaining space in the horizontal stack.
-                     */
-                    Spacer()
-
-                    /**
                      An indicator arrow that is displayed in the link cell, if applicable.
                      */
                     if configuration.theme?.hasIndicatorView ?? true {

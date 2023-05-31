@@ -46,11 +46,6 @@ struct TZSettingsNavigationCellView<Destination>: View where Destination: View {
                 TZSettingsCellContentView(configuration: configuration)
 
                 /**
-                 A spacer that fills the remaining space in the horizontal stack.
-                 */
-                Spacer()
-
-                /**
                  An indicator arrow that is displayed in the navigation cell, if applicable.
                  */
                 if configuration.theme?.hasIndicatorView ?? true {

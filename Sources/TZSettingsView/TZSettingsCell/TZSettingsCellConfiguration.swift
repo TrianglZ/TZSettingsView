@@ -62,13 +62,18 @@ extension TZSettingsView {
         let title: String
 
         /**
+         The hint to be applied to the cell, if any.
+         */
+        var hint: String?
+        /**
          The theme to be applied to the cell, if any.
          */
         var theme: Theme?
 
-        public init(image: Image, title: String, theme: Theme? = nil) {
+        public init(image: Image, title: String, hint: String? = nil, theme: Theme? = nil) {
             self.image = image
             self.title = title
+            self.hint = hint
             self.theme = theme
         }
     }
@@ -101,11 +106,21 @@ extension TZSettingsView.TZSettingCellConfiguration {
          */
         var hasIndicatorView: Bool
 
-        public init(color: Color, tint: Color, font: Font, hasIndicatorView: Bool = true) {
+        /**
+         The hint color of the cell.
+         */
+        var hintColor: Color?
+
+        public init(color: Color,
+                    tint: Color,
+                    font: Font,
+                    hasIndicatorView: Bool = true,
+                    hintColor: Color? = nil) {
             self.color = color
             self.tint = tint
             self.font = font
             self.hasIndicatorView = hasIndicatorView
+            self.hintColor = hintColor
         }
     }
 }

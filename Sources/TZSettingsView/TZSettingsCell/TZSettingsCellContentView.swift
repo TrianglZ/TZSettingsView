@@ -21,7 +21,7 @@ struct TZSettingsCellContentView: View {
         /**
          A horizontal stack that contains the components of the setting cell.
          */
-        HStack(spacing: 15) {
+        HStack(spacing: 16) {
 
             /**
              The image to be displayed in the setting cell.
@@ -35,6 +35,21 @@ struct TZSettingsCellContentView: View {
             Text(configuration.title)
                 .foregroundColor(configuration.theme?.color ?? .black)
                 .font(configuration.theme?.font ?? .system(size: 15))
+
+            /**
+             A spacer that fills the remaining space in the horizontal stack.
+             */
+            Spacer()
+
+            /**
+             The hint of the setting cell if exists.
+             */
+            if let hint = configuration.hint {
+                Text(configuration.title)
+                    .foregroundColor(configuration.theme?.hintColor ?? .gray)
+                    .font(configuration.theme?.font ?? .system(size: 15))
+                    .padding(.trailing, 20)
+            }
         }
     }
 }
