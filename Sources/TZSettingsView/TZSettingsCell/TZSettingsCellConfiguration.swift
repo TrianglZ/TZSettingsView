@@ -41,13 +41,6 @@ extension TZSettingsView {
          - action: The action to be performed.
          */
         case action(() -> Void)
-
-        /**
-         A cell type that performs an action when tapped.
-         - Parameters:
-         - action: The action to be performed.
-         */
-        case descriptionWithAction(() -> Void)
     }
 }
 
@@ -164,7 +157,7 @@ extension TZSettingsView.TZSettingCellConfiguration {
         /**
          Determines if the image has an animation.
          */
-        var isAnimated: Bool?
+        var isAnimated: Binding<Bool>
         
         /**
          The scale effect value for the image animation.
@@ -187,7 +180,7 @@ extension TZSettingsView.TZSettingCellConfiguration {
                     imageHeight: CGFloat? = 20,
                     backgroundColor: Color? = .clear,
                     verticalSpacing: CGFloat? = nil,
-                    isAnimated: Bool? = false,
+                    isAnimated: Binding<Bool>,
                     scaleEffectValue: CGFloat? = 1.0,
                     animation: Animation? = nil) {
             self.color = color

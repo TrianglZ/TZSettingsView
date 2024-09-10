@@ -44,10 +44,6 @@ struct TZSettingsSectionView: View {
                             case .action(let action):
                                 TZSettingsActionCellView(configuration: cell.cellConfiguration,
                                                           action: action)
-
-                            case .descriptionWithAction(let action):
-                                TZSettingsActionCellView(configuration: cell.cellConfiguration,
-                                                          action: action)
                             }
                         }
                         .frame(height: section.cellHeight ?? 60)

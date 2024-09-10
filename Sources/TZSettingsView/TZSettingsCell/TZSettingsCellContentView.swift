@@ -26,13 +26,15 @@ struct TZSettingsCellContentView: View {
             /**
              The image to be displayed in the setting cell.
              */
-            configuration.image
-                .frame(maxWidth: configuration.theme?.imageWidth, maxHeight: configuration.theme?.imageHeight)
-                .scaleEffect(((configuration.theme?.isAnimated ?? false) ?
-                              configuration.theme?.scaleEffectValue :
-                                1.0) ?? 1.0)
-                .animation(configuration.animation, value: (configuration.theme?.isAnimated ?? false))
-
+            if let theme = configuration.theme {
+                configuration.image
+                    .frame(maxWidth: theme.imageWidth, maxHeight: theme.imageHeight)
+                    .scaleEffect((theme.isAnimated.wrappedValue ?
+                                   theme.scaleEffectValue :
+                                    1.0) ?? 1.0)
+                    .animation(configuration.animation,
+                               value: theme.isAnimated.wrappedValue)
+            }
             /**
              A vertical stack that wraps the title and description.
              */
@@ -47,7 +49,8 @@ struct TZSettingsCellContentView: View {
                 /**
                  The description of the setting cell.
                  */
-                if !(configuration.description?.isEmpty ?? true) {
+                if let description = configuration.description,
+                   !description.isEmpty {
                     Text(configuration.description ?? "")
                         .foregroundColor(configuration.theme?.descriptionColor ?? .white)
                         .font(configuration.theme?.descriptionFont ?? .system(size: 13))
@@ -67,6 +70,6 @@ struct TZSettingsCellContentView: View {
                     .font(configuration.theme?.font ?? .system(size: 15))
                     .padding(.trailing, 16)
             }
-        }.background(configuration.theme?.backgroundColor)
+        }.background(configuration.theme?.backgroundColor ?? .clear)
     }
 }
