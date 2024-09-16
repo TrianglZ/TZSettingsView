@@ -50,6 +50,6 @@ struct TZSettingsCellContentView: View {
                     .font(configuration.theme?.font ?? .system(size: 15))
                     .padding(.trailing, 16)
             }
-        }
+        }.background(configuration.theme?.backgroundColor ?? .clear)
     }
 }

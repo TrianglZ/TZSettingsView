@@ -47,6 +47,6 @@ struct TZSettingsToggleCellView: View {
                 EmptyView()
             }
             .tint(configuration.theme?.tint)
-        }
+        }.background(configuration.theme?.backgroundColor ?? .clear)
     }
 }

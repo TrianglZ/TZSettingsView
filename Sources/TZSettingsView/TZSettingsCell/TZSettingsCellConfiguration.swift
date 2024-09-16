@@ -87,12 +87,12 @@ extension TZSettingsView.TZSettingCellConfiguration {
     public struct Theme {
 
         /**
-         The background color of the cell.
+         The font color of the cell.
          */
         var color: Color
 
         /**
-         The tint color of the cell.
+         The arrow color of the cell.
          */
         var tint: Color
 
@@ -111,16 +111,23 @@ extension TZSettingsView.TZSettingCellConfiguration {
          */
         var hintColor: Color?
 
+        /**
+         The background color of the cell.
+         */
+        var backgroundColor: Color?
+
         public init(color: Color,
                     tint: Color,
                     font: Font,
                     hasIndicatorView: Bool = true,
-                    hintColor: Color? = nil) {
+                    hintColor: Color? = nil,
+                    backgroundColor: Color? = nil) {
             self.color = color
             self.tint = tint
             self.font = font
             self.hasIndicatorView = hasIndicatorView
             self.hintColor = hintColor
+            self.backgroundColor = backgroundColor
         }
     }
 }
