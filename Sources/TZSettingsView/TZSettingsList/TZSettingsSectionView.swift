@@ -55,10 +55,9 @@ struct TZSettingsSectionView: View {
                 }
             }
             .padding(.horizontal, 20)
-            .background(Color.white)
+            .background(section.theme?.backgroundColor ?? Color.white)
             .cornerRadius(12)
         }
-        .background(section.theme?.backgroundColor ?? Color.clear)
         .padding(.horizontal, 20)
     }
 }
