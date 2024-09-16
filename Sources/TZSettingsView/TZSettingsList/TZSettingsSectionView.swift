@@ -59,5 +59,6 @@ struct TZSettingsSectionView: View {
             .cornerRadius(12)
         }
         .padding(.horizontal, 20)
+        .background(section.theme?.backgroundColor ?? Color.clear)
     }
 }

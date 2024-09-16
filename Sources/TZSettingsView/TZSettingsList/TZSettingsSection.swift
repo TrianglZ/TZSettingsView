@@ -60,10 +60,15 @@ extension TZSettingsView.Section {
         var color: Color
         /// The font to be used in the themed view or section.
         var font: Font
+        /// The background color of the theme.
+        var backgroundColor: Color?
 
-        public init(color: Color, font: Font) {
+        public init(color: Color,
+                    font: Font,
+                    backgroundColor: Color? = nil) {
             self.color = color
             self.font = font
+            self.backgroundColor = backgroundColor
         }
     }
 
