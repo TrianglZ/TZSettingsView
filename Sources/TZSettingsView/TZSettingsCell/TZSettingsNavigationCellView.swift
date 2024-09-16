@@ -53,7 +53,7 @@ struct TZSettingsNavigationCellView<Destination>: View where Destination: View {
                         .renderingMode(.template)
                         .foregroundColor(configuration.theme?.tint)
                 }
-            }
+            }.background(configuration.theme?.backgroundColor ?? .clear)
         }
     }
 }

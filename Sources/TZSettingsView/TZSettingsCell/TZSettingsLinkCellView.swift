@@ -55,7 +55,7 @@ struct TZSettingsLinkCellView: View {
                             .foregroundColor(configuration.theme?.tint)
                     }
                 }
-            }
+            }.background(configuration.theme?.backgroundColor ?? .clear)
         } else {
             EmptyView()
         }

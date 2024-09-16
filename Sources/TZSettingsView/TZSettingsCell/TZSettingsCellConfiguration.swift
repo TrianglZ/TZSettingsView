@@ -102,12 +102,12 @@ extension TZSettingsView.TZSettingCellConfiguration {
     public struct Theme {
 
         /**
-         The background color of the cell.
+         The font color of the cell.
          */
         var color: Color?
 
         /**
-         The tint color of the cell.
+         The arrow color of the cell.
          */
         var tint: Color?
 
