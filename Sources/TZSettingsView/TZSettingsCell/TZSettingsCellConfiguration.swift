@@ -135,7 +135,7 @@ extension TZSettingsView.TZSettingCellConfiguration {
 
         /**
          The description color of the cell.
-         */
+        */
         var descriptionColor: Color?
 
         /**
