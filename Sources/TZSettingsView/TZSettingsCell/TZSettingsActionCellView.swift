@@ -54,6 +54,6 @@ struct TZSettingsActionCellView: View {
                         .foregroundColor(configuration.theme?.tint)
                 }
             }
-        }.background(configuration.theme?.backgroundColor ?? .clear)
+        }
     }
 }
