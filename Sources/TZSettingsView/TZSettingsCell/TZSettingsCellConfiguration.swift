@@ -41,6 +41,13 @@ extension TZSettingsView {
          - action: The action to be performed.
          */
         case action(() -> Void)
+
+        /**
+         A cell type that shows custom view.
+         - Parameters:
+         - View: view to be implemented instead of cell.
+         */
+        case custom(AnyView)
     }
 }
 

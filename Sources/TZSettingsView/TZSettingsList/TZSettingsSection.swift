@@ -62,16 +62,19 @@ extension TZSettingsView.Section {
         var font: Font
         /// The background color of the theme.
         var backgroundColor: Color?
+        /// The horizontal padding of the section view.
+        var horizontalPadding: CGFloat
         /// The vertical padding inside section.
-        var verticalPadding: CGFloat?
+        var verticalPadding: CGFloat
 
-        public init(color: Color,
-                    font: Font,
+        public init(color: Color, font: Font,
                     backgroundColor: Color? = nil,
-                    verticalPadding: CGFloat? = 0.0) {
+                    horizontalPadding: CGFloat = 20,
+                    verticalPadding: CGFloat = 0.0) {
             self.color = color
             self.font = font
             self.backgroundColor = backgroundColor
+            self.horizontalPadding = horizontalPadding
             self.verticalPadding = verticalPadding
         }
     }
