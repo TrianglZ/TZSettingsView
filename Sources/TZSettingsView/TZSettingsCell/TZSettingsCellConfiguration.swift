@@ -109,12 +109,12 @@ extension TZSettingsView.TZSettingCellConfiguration {
     public struct Theme {
 
         /**
-         The background color of the cell.
+         The font color of the cell.
          */
         var color: Color?
 
         /**
-         The tint color of the cell.
+         The arrow color of the cell.
          */
         var tint: Color?
 
@@ -154,10 +154,6 @@ extension TZSettingsView.TZSettingCellConfiguration {
         var imageHeight: CGFloat?
 
         /**
-         The background color of the cell.
-         */
-        var backgroundColor: Color?
-        /**
          The vertical spacing between elements in the cell.
          */
         var verticalSpacing: CGFloat?      
@@ -185,7 +181,6 @@ extension TZSettingsView.TZSettingCellConfiguration {
                     descriptionFont: Font? = nil,
                     imageWidth: CGFloat? = 20,
                     imageHeight: CGFloat? = 20,
-                    backgroundColor: Color? = .clear,
                     verticalSpacing: CGFloat? = nil,
                     isAnimated: Binding<Bool>,
                     scaleEffectValue: CGFloat? = 1.0,
@@ -199,7 +194,6 @@ extension TZSettingsView.TZSettingCellConfiguration {
             self.descriptionFont = descriptionFont
             self.imageWidth = imageWidth
             self.imageHeight = imageHeight
-            self.backgroundColor = backgroundColor
             self.verticalSpacing = verticalSpacing
             self.isAnimated = isAnimated
             self.scaleEffectValue = scaleEffectValue
