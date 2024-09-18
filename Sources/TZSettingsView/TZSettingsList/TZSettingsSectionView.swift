@@ -44,6 +44,8 @@ struct TZSettingsSectionView: View {
                             case .action(let action):
                                 TZSettingsActionCellView(configuration: cell.cellConfiguration,
                                                           action: action)
+                            case .custom(let customView):
+                                  customView
                             }
                         }
                         .frame(height: section.cellHeight ?? 60)
@@ -54,7 +56,7 @@ struct TZSettingsSectionView: View {
                     }
                 }
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, section.theme?.horizontalPadding)
             .padding(.vertical, section.theme?.verticalPadding ?? 0)
             .background(section.theme?.backgroundColor ?? Color.white)
             .cornerRadius(12)
