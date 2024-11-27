@@ -45,6 +45,7 @@ struct TZSettingsCellContentView: View {
                 Text(configuration.title)
                     .foregroundColor(configuration.theme?.color ?? .black)
                     .font(configuration.theme?.font ?? .system(size: 15))
+                    .frame(maxWidth: .infinity)
 
                 /**
                  The description of the setting cell.
@@ -56,7 +57,6 @@ struct TZSettingsCellContentView: View {
                         .font(configuration.theme?.descriptionFont ?? .system(size: 13))
                 }
             }
-            .frame(maxWidth: .infinity)
             /**
              A spacer that fills the remaining space in the horizontal stack.
              */
