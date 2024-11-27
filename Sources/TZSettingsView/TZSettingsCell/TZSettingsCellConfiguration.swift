@@ -124,6 +124,11 @@ extension TZSettingsView.TZSettingCellConfiguration {
         var font: Font?
 
         /**
+         The lintLimit to be used in title in the cell.
+         */
+        var titleLineLimit: Int?
+
+        /**
          A boolean value indicating whether or not the cell should display an indicator view.
          */
         var hasIndicatorView: Bool
@@ -175,6 +180,7 @@ extension TZSettingsView.TZSettingCellConfiguration {
         public init(color: Color? = nil,
                     tint: Color? = nil,
                     font: Font? = nil,
+                    titleLineLimit: Int? = nil,
                     hasIndicatorView: Bool = true,
                     hintColor: Color? = nil,
                     descriptionColor: Color? = nil,
@@ -188,6 +194,7 @@ extension TZSettingsView.TZSettingCellConfiguration {
             self.color = color
             self.tint = tint
             self.font = font
+            self.titleLineLimit = titleLineLimit
             self.hasIndicatorView = hasIndicatorView
             self.hintColor = hintColor
             self.descriptionColor = descriptionColor

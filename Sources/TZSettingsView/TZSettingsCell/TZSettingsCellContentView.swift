@@ -45,7 +45,7 @@ struct TZSettingsCellContentView: View {
                 Text(configuration.title)
                     .foregroundColor(configuration.theme?.color ?? .black)
                     .font(configuration.theme?.font ?? .system(size: 15))
-                    .frame(maxWidth: .infinity)
+                    .lineLimit(configuration.theme?.titleLineLimit)
 
                 /**
                  The description of the setting cell.
