@@ -56,10 +56,7 @@ struct TZSettingsCellContentView: View {
                         .font(configuration.theme?.descriptionFont ?? .system(size: 13))
                 }
             }
-            /**
-             A spacer that fills the remaining space in the horizontal stack.
-             */
-            Spacer()
+            .frame(maxWidth: .infinity)
 
             /**
              The hint of the setting cell if exists.
