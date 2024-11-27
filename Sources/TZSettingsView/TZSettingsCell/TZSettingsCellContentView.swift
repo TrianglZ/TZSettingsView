@@ -57,6 +57,10 @@ struct TZSettingsCellContentView: View {
                 }
             }
             .frame(maxWidth: .infinity)
+            /**
+             A spacer that fills the remaining space in the horizontal stack.
+             */
+            Spacer()
 
             /**
              The hint of the setting cell if exists.
