@@ -107,7 +107,8 @@ extension TZSettingsView {
 
 // MARK: - Conform to Equatable
 extension TZSettingsView.TZSettingConfiguration: Equatable {
-    public static func == (lhs: TZSettingsView.TZSettingConfiguration, rhs: TZSettingsView.TZSettingConfiguration) -> Bool {
+    public static func == (lhs: TZSettingsView.TZSettingConfiguration,
+                           rhs: TZSettingsView.TZSettingConfiguration) -> Bool {
         lhs.id == rhs.id
     }
 }
